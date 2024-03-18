@@ -1,0 +1,205 @@
+*{
+    --gradient: linear-gradient(to top, var(--alice-blue-2), var(--alice-blue-3));
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    --white: hsl(0, 0%, 100%);
+    --radius-18: 18px;
+    --shadow-1: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+    --carolina-blue: hsl(204, 91%, 53%);
+    --fs-6: 0.875rem;
+    --independence: hsl(219, 21%, 39%);
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(imagens/pousada.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    background-color: transparent;
+    width: 100%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: #ffa600;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition-duration: 0.4s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.card{
+    
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navcenter{
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    display: inline-block;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 40px;
+    padding: 17px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 16vh;
+    color: #fff;
+}
+.content h1{
+    font-size: 65px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+}
+.button{
+    z-index: 1;
+}
+.button button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 0.9px solid #ffa600;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 2s;
+}
+.button button:hover{
+    border: 0.9px solid black;
+    transition: 0.8s;
+}
+span{
+    background-color: #ffa600;
+    height: 100%;
+    width: 0;
+    border-radius: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.8s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+footer{
+    background-color: #ffb01c;
+}
+
+.footersocial{
+    display: flex;
+    justify-content: center;
+    padding-right: 230px;;
+}
+
+.footersocial a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 0 10px;
+    border-radius: 30%;
+}
+
+.footersocial a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.footersocial a:hover{
+    background: black;
+    transition: 0.8s;
+}
+.footersocial a:hover i{
+    color: #fff;
+    transition: 0.8s;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    padding: 30px 0;
+}
+.info{
+    width: 100%;
+    padding: 70px 0;
+}
+.localizacao{
+    width: 15%;
+    border-radius: 15px;
+    color: white;
+}
+.localizacao h2{
+    margin-left: 20px;
+    padding-left: 15px;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: black 5px 2px 8px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.localizacao p {
+    margin-bottom: 15px;
+    padding-left: 35px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: black 5px 2px 8px;
+    margin: 0;
+}
+.localizacao .Telefone{
+    margin-top: 5px;
+}
+
+
+@media (max-width: 768px){
+    footer{
+        flex-direction: column;
+    }
+}
